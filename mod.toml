@@ -1,0 +1,35 @@
+# Fields that end up in the mod's manifest.
+[manifest]
+# Unique ID of this mod. Pick something long enough that it'll never be the same as any other mod.
+# The name displayed in the mod management menu is separate from this so this doesn't need to be human readable.
+id = "dk64_music_rando"
+# Version of this mod.
+version = "1.0.0"
+# The name that will show up for this mod in the mod menu. This should be human readable.
+display_name = "Music Rando"
+# The description that will show up when this mod is displayed in the mod menu. This should be human readable.
+description =  "Allows custom music to be played in game using the pack builder at https://theballaam96.github.io/PackBuilder/ you'll need to place your pack.zip into your mods_data folder, this folder will be autocreated if it does not currently exist."
+# A short description that will show up in this mod's entry in the mod list. This should be human readable and kept short
+# to prevent it from being cut off due to the limited space.
+short_description = "Allows custom music to be played instead of the normal game music using the PackBuilder website."
+# Authors of this mod.
+authors = [ "Killklli", "Ballaam"]
+# ID of the target recomp game.
+game_id = "dk64"
+# Minimum version of the target recomp (e.g. Zelda 64: Recompiled) that this mod can run on.
+minimum_recomp_version = "1.0.2"
+
+# Requires REPY (RecompExternalPython) so mod code can call into Python for the music-swap logic.
+dependencies = ["RecompExternalPython_API:2.0.0"]
+
+# Inputs to the mod tool.
+[inputs]
+# Input elf file to generate a mod from.
+elf_path = "build/mod.elf"
+# Output mod filename.
+mod_filename = "dk64_music_rando"
+# Reference symbol files.
+func_reference_syms_file = "Dk64Syms/dump.toml"
+data_reference_syms_files = [ "Dk64Syms/data_dump.toml" ]
+# Additional files to include in the mod.
+additional_files = ["thumb.dds", "src/music_rando.py", "src/Songs.py", "src/SongGroups.py", "src/SongsEnum.py", "src/SongType.py"]
