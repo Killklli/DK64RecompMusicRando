@@ -2,6 +2,8 @@
 
 DK64 Music rando lets you use packs generated at https://theballaam96.github.io/PackBuilder/ so the game can have randomized music.
 
+This Requires the Python Library mod
+
 ## What It Does
 - The mod will randomly pick a song from your pack stored at mods_data/pack.zip
 - This song will persist for the length of the game running
